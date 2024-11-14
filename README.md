@@ -1,3 +1,22 @@
+# Fork note
+
+This links to notPlancha/scoop instead.
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm https://raw.githubusercontent.com/notPlancha/scoop-install/master/install.ps1 | iex
+```
+My usual setup on a new pc
+```powershell
+scoop install git
+scoop bucket add extras
+scoop bucket add notPlancha https://github.com/notPlancha/bucket
+scoop install vscode
+scoop install main/rstudio # or scoop install notPlancha/rstudio
+scoop install gh
+iwr -useb https://pixi.sh/install.ps1 | iex
+```
+
 # Scoop (un)installer
 
 [![ci-badge](https://github.com/ScoopInstaller/Install/actions/workflows/ci.yml/badge.svg)](https://github.com/ScoopInstaller/Install/actions/workflows/ci.yml)
