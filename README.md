@@ -1,6 +1,6 @@
 # Fork note
 
-This links to notPlancha/scoop instead.
+This links to https://github.com/notPlancha/scoop instead.
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -14,7 +14,9 @@ scoop bucket add notPlancha https://github.com/notPlancha/bucket
 scoop install vscode
 scoop install main/rstudio # or scoop install notPlancha/rstudio
 scoop install gh
-iwr -useb https://pixi.sh/install.ps1 | iex
+scoop install bun
+iwr -useb https://pixi.sh/install.ps1 | iex # global pixi is better in my experience for now
+pixi global install rattler-build
 ```
 
 # Scoop (un)installer
