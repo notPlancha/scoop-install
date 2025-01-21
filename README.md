@@ -12,7 +12,7 @@ scoop install git
 scoop bucket add extras
 scoop bucket add notPlancha https://github.com/notPlancha/bucket
 scoop install vscode
-scoop install main/rstudio # or scoop install notPlancha/rstudio
+scoop install extras/rstudio # or scoop install notPlancha/rstudio
 scoop install gh
 scoop install bun
 iwr -useb https://pixi.sh/install.ps1 | iex # global pixi is better in my experience for now
