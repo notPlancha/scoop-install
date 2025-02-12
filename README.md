@@ -6,6 +6,14 @@ This links to https://github.com/notPlancha/scoop instead.
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm https://raw.githubusercontent.com/notPlancha/scoop-install/master/install.ps1 | iex
 ```
+
+If you want to substitute your scoop for my fork just run 
+```powershell
+rm "${env:USERPROFILE}\scoop\apps\scoop\current" -Force
+git clone "https://github.com/notPlancha/scoop.git" "${env:USERPROFILE}\scoop\apps\scoop\current"
+# reload the shell if needed
+```
+
 My usual setup on a new pc
 ```powershell
 scoop install git
@@ -15,6 +23,7 @@ scoop install vscode
 scoop install extras/rstudio # or scoop install notPlancha/rstudio
 scoop install gh
 scoop install bun
+scoop install pwsh
 iwr -useb https://pixi.sh/install.ps1 | iex # global pixi is better in my experience for now
 pixi global install rattler-build
 ```
