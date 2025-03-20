@@ -592,7 +592,7 @@ function Install-Scoop {
                 $Env:HTTPS_PROXY = $downloader.Proxy.Address
             }
             Write-Verbose "Cloning $SCOOP_PACKAGE_GIT_REPO to $SCOOP_APP_DIR"
-            git clone -q $SCOOP_PACKAGE_GIT_REPO $SCOOP_APP_DIR
+            git clone -q -b master $SCOOP_PACKAGE_GIT_REPO $SCOOP_APP_DIR
             if (-Not $?) {
                 throw 'Cloning failed. Falling back to downloading zip files.'
             }
