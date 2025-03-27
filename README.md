@@ -18,14 +18,14 @@ My usual setup on a new pc
 ```powershell
 scoop install git
 scoop bucket add extras
-scoop bucket add notPlancha https://github.com/notPlancha/bucket
 scoop install vscode
-scoop install extras/rstudio # or scoop install notPlancha/rstudio
 scoop install gh
 scoop install bun
 scoop install pwsh
 iwr -useb https://pixi.sh/install.ps1 | iex # global pixi is better in my experience for now
 pixi global install rattler-build
+scoop bucket add notPlancha https://github.com/notPlancha/bucket
+scoop install extras/rstudio # or scoop install notPlancha/rstudio
 ```
 
 # Scoop (un)installer
